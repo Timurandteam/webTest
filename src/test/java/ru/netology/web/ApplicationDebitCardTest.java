@@ -25,60 +25,60 @@ public class ApplicationDebitCardTest {
         $("[data-test-id=order-success]").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
     }
 
-//    @Test
-//    void shouldTestValidValuesNameWithDash() {
-//        SelenideElement form = $(".form");
-//        form.$("[data-test-id=name] input").setValue("Тимур-Ринат");
-//        form.$("[data-test-id=phone] input").setValue("+12345678912");
-//        form.$("[data-test-id=agreement]").click();
-//        form.$(".button").click();
-//        $("[data-test-id=order-success]").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
-//    }
-//
-//    @Test
-//    void shouldTestInvalidName() {
-//        SelenideElement form = $(".form");
-//        form.$("[data-test-id=name] input").setValue("Timur");
-//        form.$("[data-test-id=phone] input").setValue("+79170000000");
-//        form.$("[data-test-id=agreement]").click();
-//        form.$(".button").click();
-//        $("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
-//    }
-//
-//    @Test
-//    void shouldTestInvalidPhone() {
-//        SelenideElement form = $(".form");
-//        form.$("[data-test-id=name] input").setValue("Иван Петров");
-//        form.$("[data-test-id=phone] input").setValue("+791700000");
-//        form.$("[data-test-id=agreement]").click();
-//        form.$(".button").click();
-//        $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
-//    }
-//
-//    @Test
-//    void shouldTestSendBlankFieldName() {
-//        SelenideElement form = $(".form");
-//        form.$("[data-test-id=phone] input").setValue("+79170000000");
-//        form.$("[data-test-id=agreement]").click();
-//        form.$(".button").click();
-//        $("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
-//    }
-//
-//    @Test
-//    void shouldTestSendBlankFieldPhone() {
-//        SelenideElement form = $(".form");
-//        form.$("[data-test-id=name] input").setValue("Иван Петров");
-//        form.$("[data-test-id=agreement]").click();
-//        form.$(".button").click();
-//        $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
-//    }
-//
-//    @Test
-//    void shouldTestSendNoCheckCheckbox() {
-//        SelenideElement form = $(".form");
-//        form.$("[data-test-id=name] input").setValue("Иван Петров");
-//        form.$("[data-test-id=phone] input").setValue("+79170000000");
-//        form.$(".button").click();
-//        $("[data-test-id=agreement]").shouldNotHave(Condition.attribute(".checkbox_checked"));
-//    }
+    @Test
+    void shouldTestValidValuesNameWithDash() {
+        SelenideElement form = $(".form");
+        form.$("[data-test-id=name] input").setValue("Тимур-Ринат");
+        form.$("[data-test-id=phone] input").setValue("+12345678912");
+        form.$("[data-test-id=agreement]").click();
+        form.$(".button").click();
+        $("[data-test-id=order-success]").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+    }
+
+    @Test
+    void shouldTestInvalidName() {
+        SelenideElement form = $(".form");
+        form.$("[data-test-id=name] input").setValue("Timur");
+        form.$("[data-test-id=phone] input").setValue("+79170000000");
+        form.$("[data-test-id=agreement]").click();
+        form.$(".button").click();
+        $("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+    }
+
+    @Test
+    void shouldTestInvalidPhone() {
+        SelenideElement form = $(".form");
+        form.$("[data-test-id=name] input").setValue("Иван Петров");
+        form.$("[data-test-id=phone] input").setValue("+791700000");
+        form.$("[data-test-id=agreement]").click();
+        form.$(".button").click();
+        $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+    }
+
+    @Test
+    void shouldTestSendBlankFieldName() {
+        SelenideElement form = $(".form");
+        form.$("[data-test-id=phone] input").setValue("+79170000000");
+        form.$("[data-test-id=agreement]").click();
+        form.$(".button").click();
+        $("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
+    }
+
+    @Test
+    void shouldTestSendBlankFieldPhone() {
+        SelenideElement form = $(".form");
+        form.$("[data-test-id=name] input").setValue("Иван Петров");
+        form.$("[data-test-id=agreement]").click();
+        form.$(".button").click();
+        $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
+    }
+
+    @Test
+    void shouldTestSendNoCheckCheckbox() {
+        SelenideElement form = $(".form");
+        form.$("[data-test-id=name] input").setValue("Иван Петров");
+        form.$("[data-test-id=phone] input").setValue("+79170000000");
+        form.$(".button").click();
+        $("[data-test-id=agreement]").shouldNotHave(Condition.attribute(".checkbox_checked"));
+    }
 }
